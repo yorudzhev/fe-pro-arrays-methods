@@ -10,7 +10,7 @@ const brandFilter = (brand) => {return goods.filter((item) => item.brand === bra
  * @param {string} color
  * @returns {*}
  */
-const colorFilter = (color) => {return goods.filter((item) => item.color === color)};
+const colorFilter = (color) => {return goods.filter((item) => item.color ===  color)};
 
 /**
  * @param {string} model
