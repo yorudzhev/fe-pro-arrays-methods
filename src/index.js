@@ -48,8 +48,8 @@ const osFilter = (os) => {return goods.filter((item) => item.os === os)};
  */
 const rangeFilter = (from, to) => {
   return goods.filter( (item) => item.price >= from && item.price <= to ).sort( (a, b) => {
-  if (a.price > b.price) return 1;
-  if (a.price < b.price) return -1;
+  if (a.price < b.price) return 1;
+  if (a.price > b.price) return -1;
   return 0;})
 };
 
