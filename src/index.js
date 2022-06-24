@@ -47,7 +47,7 @@ const osFilter = (os) => {return goods.filter((item) => item.os === os)};
  * @param {number} to
  */
 const rangeFilter = (from, to) => {
-  return goods.filter( (item) => item.price > from && item.price < to ).sort( (a, b) => {
+  return goods.filter( (item) => item.price >= from && item.price <= to ).sort( (a, b) => {
   if (a.price > b.price) return 1;
   if (a.price < b.price) return -1;
   return 0;})
@@ -62,15 +62,15 @@ const maxPriceReducer = () => {
 };;
 
 const toMaxSorter = () => {return goods.sort ( (a, b) => {
-  if (a.price > b.price) return 1;
-  if (a.price < b.price) return -1;
+  if (a.price < b.price) return 1;
+  if (a.price > b.price) return -1;
   return 0;
   } )
 };
 
 const toMinSorter = () => {return goods.sort ( (a, b) => {
-  if (a.price < b.price) return 1;
-  if (a.price > b.price) return -1;
+  if (a.price > b.price) return 1;
+  if (a.price < b.price) return -1;
   return 0;
   } )
 };
